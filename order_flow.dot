@@ -1,0 +1,38 @@
+digraph OrderFlow {
+    rankdir=LR;
+    node [shape=box, style="rounded,filled", fillcolor=lightblue];
+    
+    // Define nodes
+    NEW [label="NEW\n(Restaurant)", fillcolor=lightgray];
+    PREPARING [label="PREPARING\n(Restaurant)", fillcolor=lightyellow];
+    READY [label="READY\n(Available Orders)", fillcolor=orange];
+    REACHED [label="REACHED_RESTAURANT\n(Active Orders)", fillcolor=purple, fontcolor=white];
+    PICKED_UP [label="PICKED_UP/ON_THE_WAY\n(Active Orders)", fillcolor=lightblue];
+    DELIVERED [label="DELIVERED\n(Completed Orders)", fillcolor=lightgreen];
+    CANCELLED [label="CANCELLED", fillcolor=pink];
+    
+    // Define edges with actions
+    NEW -> PREPARING [label="Restaurant accepts"];
+    PREPARING -> READY [label="Restaurant marks ready"];
+    READY -> REACHED [label="Delivery: Reached Restaurant\nPOST /orders/{id}/reached"];
+    REACHED -> PICKED_UP [label="Delivery: Pick Up Order\nPOST /orders/{id}/picked-up"];
+    PICKED_UP -> DELIVERED [label="Delivery: Complete\nPOST /orders/{id}/complete"];
+    
+    // Cancellation paths
+    NEW -> CANCELLED [label="Cancel", style=dashed];
+    PREPARING -> CANCELLED [label="Cancel", style=dashed];
+    READY -> CANCELLED [label="Cancel", style=dashed];
+    REACHED -> CANCELLED [label="Cancel", style=dashed];
+    PICKED_UP -> CANCELLED [label="Cancel", style=dashed];
+    
+    // Legend
+    subgraph cluster_legend {
+        label="Legend";
+        style=filled;
+        fillcolor=white;
+        
+        leg1 [label="Orange = Available Orders Tab", fillcolor=orange];
+        leg2 [label="Purple/Blue = Active Orders Tab", fillcolor=purple, fontcolor=white];
+        leg3 [label="Green = Completed Orders Tab", fillcolor=lightgreen];
+    }
+}

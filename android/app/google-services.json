@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "381881379914",
+    "project_id": "dfdapp-e4703",
+    "storage_bucket": "dfdapp-e4703.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381881379914:android:047cfecec4678ab7c80ab3",
+        "android_client_info": {
+          "package_name": "com.dharaifood.restaurant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaatIBdREqbOW5dIX0-IltpId9PHE5NAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381881379914:android:f3ffba48ecd3feb8c80ab3",
+        "android_client_info": {
+          "package_name": "com.dharaifooddelivery.customapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaatIBdREqbOW5dIX0-IltpId9PHE5NAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381881379914:android:e22b5a53163f9e3ac80ab3",
+        "android_client_info": {
+          "package_name": "com.dharaifooddelivery.deliveryboy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaatIBdREqbOW5dIX0-IltpId9PHE5NAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
